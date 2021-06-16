@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "http-server": "^0.12.3"
+  },
+  "devDependencies": {
+    "cypress": "^7.5.0"
+  }
+}

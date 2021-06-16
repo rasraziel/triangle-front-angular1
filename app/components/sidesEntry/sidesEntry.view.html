@@ -1,0 +1,24 @@
+<div class="sides" ng-controller="sidesEntry as s">
+    <p>Insert the side values for the triangle. As a default, lines are connected
+        to construct a triangle. (0-300)</p>
+    <form name="MyForm" action="/">
+        <label htmlFor="fname">side A</label>
+        <input type="number" id="sideA" ng-model="s.ab" ng-change="s.onABChange()" placeholder="e.g.40"
+            required></input>
+        <span class="validity"></span>
+        <br />
+
+        <label htmlFor="lname">side B</label>
+        <input type="number" id="sideB" ng-model="s.bc" ng-change="s.onBCChange()" placeholder="e.g.40"
+            required></input>
+        <span class="validity"></span>
+        <br />
+
+        <label htmlFor="lname">side C</label>
+        <input type="number" id="sideC" ng-model="s.ca" ng-change="s.onCAChange()" placeholder="e.g.160"
+            required></input>
+        <span class="validity"></span>
+    </form>
+    <button class="calcBtn" ng-disabled="MyForm.$invalid" ng-click="s.calculate()"
+        ng-style="{'margin-top': '60px'}">Calculate</button>
+</div>

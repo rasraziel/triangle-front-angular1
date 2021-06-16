@@ -1,0 +1,27 @@
+<div class="container" ng-controller="Main as m">
+    <div class="infoText">
+        <h1>Welcome to the Triangle App</h1>
+        <p>Test if a triangle is scalene, equilateral, isosceles, or neither of these. Choose between two inputs
+            represented by the buttons "coordinates" and "sides" of the triangle.
+        </p>
+    </div>
+    <div class="btns" ng-style="{'border': '0'}">
+        <button class="coordinates" ng-click="m.hideContentPoints()">Coordinates</button>
+        <button class="sidesBtn" ng-click="m.hideContentSides()">Sides</button>
+    </div>
+    <div class="content">
+        <div class="drawing" id="container"></div>
+        <div class="inputs">
+            <h2 ng-style="{'border': 0, 'display' : (m.selectionInfoVisible) ? 'flex':'none' }" class="hiddenContent">
+                Choose your
+                input as coordinates or side lengths of the triangle</h2>
+            <div ng-style="{ 'display' : (m.sidesWindowVisible) ? 'block':'none' }" ng-include
+                src="'/app/components/sidesEntry/sidesEntry.view.html'"></div>
+            <div ng-style="{ 'display' : (m.pointsWindowVisible) ? 'block':'none' }" ng-include
+                src="'/app/components/pointsEntry/pointsEntry.view.html'"></div>
+        </div>
+    </div>
+    <div class="answer">
+        <h2 id="txtValue">{{answer}}</h2>
+    </div>
+</div>

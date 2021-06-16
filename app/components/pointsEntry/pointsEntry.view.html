@@ -1,0 +1,33 @@
+<div class="points" ng-controller="pointsEntry as p">
+    <p>Insert x and y coordinates of the 3 vertices of the triangle. (0-300)</p>
+
+    <form name="MyForm" action="/">
+        <label htmlFor="fname">Vertex point A (x, y)</label><br />
+        <input type="number" id="side1_posX" ng-model="p.aX" ng-change="p.onAXChange()" placeholder="e.g.40"
+            required></input>
+        <span class="validity"></span>
+
+        <input type="number" id="side1_posY" ng-model="p.aY" ng-change="p.onAYChange()" placeholder="e.g.40" step="0.01"
+            required></input>
+        <span class="validity"></span>
+        <br />
+
+        <label htmlFor="lname">Vertex point B (x, y)</label><br />
+        <input type="number" id="side2_posX" ng-model="p.bX" ng-change="p.onBXChange()" placeholder="e.g.40" step="0.01"
+            required></input>
+        <span class="validity"></span>
+        <input type="number" id="side2_posY" ng-model="p.bY" ng-change="p.onBYChange()" placeholder="e.g.120"
+            step="0.01" required></input>
+        <span class="validity"></span>
+        <br />
+
+        <label htmlFor="lname">Vertex point C (x, y)</label><br />
+        <input type="number" id="side3_posX" ng-model="p.cX" ng-change="p.onCXChange()" placeholder="e.g.160"
+            step="0.01" required></input>
+        <span class="validity"></span>
+        <input type="number" id="side3_posY" ng-model="p.cY" ng-change="p.onCYChange()" placeholder="e.g.140"
+            step="0.01" required></input>
+        <span class="validity"></span>
+    </form>
+    <button class="calcBtn" ng-disabled="MyForm.$invalid" ng-click="p.calculate()">Calculate</button>
+</div>

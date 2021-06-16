@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" ng-app="TriangleApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="./app/app.module.js"></script>
+    <script src="./app/components/form/form.controller.js"></script>
+    <script src="./app/components/form/form.service.js"></script>
+    <script src="./app/components/pointsEntry/pointsEntry.controller.js"></script>
+    <script src="./app/components/pointsEntry/pointsEntry.service.js"></script>
+    <script src="./app/components/sidesEntry/sidesEntry.controller.js"></script>
+    <script src="./app/components/sidesEntry/sidesEntry.service.js"></script>
+    <script src="https://unpkg.com/konva@8/konva.min.js"></script>
+  
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+</head>
+<body>
+
+   <div ng-include src="'/app/components/form/formView.html'"></div>
+
+</body>
+
+</html>
