@@ -37,6 +37,10 @@ function Main($rootScope) {
         this.coordinates = coordinates;
     }
 
+    this.getRandomColor = () => {
+        return "#" + ('00000' + (Math.random() * (1 << 24) | 0).toString(16)).slice(-6);
+    }
+
 
     $rootScope.konva = () => {
         let stage = new Konva.Stage({
@@ -53,7 +57,7 @@ function Main($rootScope) {
             draggable: true,
             fillLinearGradientStartPoint: { x: $rootScope.axis.a.x, y: 300 - $rootScope.axis.a.y },
             fillLinearGradientEndPoint: { x: $rootScope.axis.c.x, y: 300 - $rootScope.axis.c.y },
-            fillLinearGradientColorStops: [0, "#" + Math.floor(Math.random() * 16777215).toString(16), 1, "#" + Math.floor(Math.random() * 16777215).toString(16)]
+            fillLinearGradientColorStops: [0, this.getRandomColor(), 1, this.getRandomColor()]
         });
         // add the shape to the layer
         layer.add(poly);
