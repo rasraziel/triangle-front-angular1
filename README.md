@@ -12,6 +12,6 @@ Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-Also deployed on Heroku:
-Open [https://triangle-front-angular.herokuapp.com/](https://triangle-front-angular.herokuapp.com/) to view it in the browser.
-The Heroku deployment might take up to 10 sec to load.
+Also deployed on Render:
+Open [https://triangle-front-angularjs.onrender.com](https://triangle-front-angularjs.onrender.com) to view it in the browser.
+The Render deployment might take up to 10 sec to load.
